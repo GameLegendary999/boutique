@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo_boutique.png">
+</head>
+
+<body>
+    <!-- Bandeau de navigation avec logo -->
+    <nav class="bandeau">
+        <img src="logo_boutique.png" alt="Logo" class="bandeau-image">
+        <ul>
+            <li><a href="dashboard.html">Accueil</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <li><a href="index.html" onclick="deconnecter()">Déconnexion</a></li>
+        </ul>
+    </nav>
+
+    <h1>Bienvenue sur votre tableau de bord</h1>
+
+    <div id="produits"></div>
+    <script src="scripts/app.js"></script>
+    
+    <script>
+        function deconnecter() {
+            fetch('php/deconnexion.php').then(() => {
+                window.location.href = 'index.html';
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>

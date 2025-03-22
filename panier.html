@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="icon" type="image/png" href="logo_boutique.png">
+</head>
+
+<body>
+    <!-- Bandeau de navigation -->
+    <nav class="bandeau">
+        <img src="logo_boutique.png" alt="Logo" class="bandeau-image">
+        <ul>
+            <li><a href="dashboard.html">Accueil</a></li>
+            <li><a href="panier.html">Panier</a></li>
+            <li><a href="index.html" onclick="deconnecter()">Déconnexion</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <!-- Section gauche : Liste des articles -->
+        <div class="panier-section">
+            <h1>Mon Panier</h1>
+            <div id="panier">
+                
+            </div>
+        </div>
+        
+        <div class="resume-section">
+            <style>
+                .resume-section {
+                    height: 150px;
+                }
+            </style>
+            <h2>Résumé</h2>
+            <div class="resume-content">
+                <!-- Le total général sera inséré ici -->
+            </div>
+                <form action="php/valider_commande.php" method="POST">
+                    <button id="valider-panier" type="submit">Valider le panier</button>
+                </form>
+                <div id="message-validation"></div> <!-- Zone où le message s'affichera -->
+        </div>
+
+
+
+    </div>
+
+    <div class="dernieres-commandes">
+        <h3>Vos 3 dernières commandes</h3>
+        <div id="liste-commandes">
+            <!-- Recent orders will be injected here dynamically -->
+        </div>
+    </div>
+
+
+
+
+    <!-- Script JS -->
+   
+    
+    <script src="scripts/panier.js"></script>
+
+    <script>
+        // Fonction pour gérer la déconnexion
+        function deconnecter() {
+            fetch('php/deconnexion.php').then(() => {
+                window.location.href = 'index.html';
+            });
+        }
+    </script>
+
+</body>
+
+</html>

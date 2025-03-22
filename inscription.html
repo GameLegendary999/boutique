@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="logo_boutique.png">
+</head>
+
+<body>
+    <!-- Bandeau de navigation -->
+    <nav class="bandeau">
+        <img src="logo_boutique.png" alt="Logo" class="bandeau-image">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+        </ul>
+    </nav>
+
+    <h1>Inscription</h1>
+    <form id="inscriptionForm">
+        <label for="nom">Nom complet :</label>
+        <input type="text" id="nom" name="nom" required>
+        <label for="email">Adresse email :</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <!-- Script JS -->
+    <script src="scripts/inscription.js"></script>
+</body>
+
+</html>

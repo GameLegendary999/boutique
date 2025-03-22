@@ -1,0 +1,244 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #28a745;
+}
+
+/* Bandeau de navigation */
+.bandeau {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bandeau img.bandeau-image {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.bandeau ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.bandeau ul li {
+    margin: 0 15px;
+}
+
+.bandeau ul li a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.bandeau ul li a:hover {
+    color: #28a745;
+}
+
+/* Formulaires */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+form button:hover {
+    background-color: #28a745;
+}
+
+/* Produits */
+#produits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.produit {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.produit h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+.produit p {
+    font-size: 14px;
+    color: #666;
+}
+
+.produit button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.produit button:hover {
+    background-color: #218838;
+}
+
+/* Panier */
+#panier {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#panier .produit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#panier .produit:last-child {
+    border-bottom: none;
+}
+
+#panier .produit h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+#panier .produit p {
+    margin: 0;
+    color: #666;
+}
+
+/* Messages d'erreur ou vides */
+.message {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+}
+
+
+.produit {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produit img.produit-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.produit h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.produit p {
+    font-size: 14px;
+    color: #555;
+}
+
+.produit button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.produit button:hover {
+    background-color: #218838;
+}
+
+.produit img.produit-image {
+    width: 100px;
+    /* Largeur fixe */
+    height: 100px;
+    /* Hauteur fixe */
+    object-fit: cover;
+    /* Maintient les proportions en remplissant la boîte */
+    border-radius: 5px;
+    /* Coins arrondis (optionnel) */
+    margin-bottom: 10px;
+    display: block;
+    /* S'assure que l'image s'affiche bien comme un bloc */
+    margin-left: auto;
+    /* Centre l'image horizontalement */
+    margin-right: auto;
+    /* Centre l'image horizontalement */
+}
